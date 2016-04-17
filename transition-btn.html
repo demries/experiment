@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Эксперимент</title>
+    <style>
+        body { text-align: center; }
+
+        a {
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        /* Плавные переходы */
+        a.foo {
+            padding: 5px 10px;
+            background: #9c3;
+            /* Свойство, на которое будет накладываться переход */
+            -webkit-transition-property: background;
+                 -o-transition-property: background;
+                    transition-property: background;
+            /* Продолжительность перехода */
+            -webkit-transition-duration: 0.3s;
+                 -o-transition-duration: 0.3s;
+                    transition-duration: 0.3s;
+            /* Как быстро переход осуществляется с течением времени */
+            -webkit-transition-timing-function: ease-out;
+                 -o-transition-timing-function: ease-out;
+                    transition-timing-function: ease-out;
+            /* Задержка срабатывания анимации */
+            -webkit-transition-delay: 0.5s;
+                 -o-transition-delay: 0.5s;
+                    transition-delay: 0.5s;
+        }
+
+        a.foo:hover,
+        a.foo:focus { background: #690; }
+
+        /* --- */
+
+        a.foo2 {
+            padding: 5px 20px;
+            background: red;
+            /* Короткая запись */
+            -webkit-transition: background 0.3s ease 0.5s;
+                 -o-transition: background 0.3s ease 0.5s;
+                    transition: background 0.3s ease 0.5s;
+        }
+
+        a.foo2:hover { background: orange; }
+
+        /* --- */
+
+        .foo3 {
+            padding: 5px 25px;
+            background: pink;
+            /* Переход для нескольких свойств */
+            -webkit-transition: background .3s ease, color .2s linear;
+                 -o-transition: background .3s ease, color .2s linear;
+                    transition: background .3s ease, color .2s linear;
+        }
+
+        .foo3:hover,
+        .foo3:focus {
+            color: yellow;
+            background: cyan;
+        }
+
+        /* --- */
+
+        .foo4 {
+            padding: 5px 30px;
+            background: blue;
+            /* Переход для всех свойств элемента */
+            -webkit-transition: all 0.3s ease;
+                 -o-transition: all 0.3s ease;
+                    transition: all 0.3s ease;
+        }
+
+        .foo4:hover,
+        .foo4:focus {
+            color: red;
+            background: yellow;
+        }
+    </style>
+</head>
+<body>
+    <a href="#" class="foo">Transition me!</a>
+    <br>
+    <a href="#" class="foo2">Transition me!</a>
+    <br>
+    <a href="#" class="foo3">Transition me!</a>
+    <br>
+    <a href="#" class="foo4">Transition me!</a>
+</body>
+</html>
