@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Испытание: cпутники</title>
+        <meta charset="utf-8">
+        <style>
+            html, body {
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                width: 550px;
+                height: 315px;
+                background: url('/assets/course70/cosmos.jpg');
+            }
+
+            .moon {
+                position: absolute;
+                width: 140px;
+                height: 140px;
+                border-radius: 50%;
+                box-shadow: 0 0 5px white;
+            }
+
+            /*
+            Смешиваемые цвета для спутников
+
+            Cплошные фоны:
+
+            1. спутник - luna
+            background-color: #FFDC00;
+
+            2. спутник - umbriel
+            background-color: #DDDDDD;
+
+            3. спутник - titan
+            background-color: #DDDDDD;
+
+            4. спутник - io
+            background-color: #DDDDDD;
+
+            5. спутник - europa
+            background-color: #DDDDDD;
+
+            Градиенты:
+
+            6. спутник - triton
+            linear-gradient(#FFDC00, #FFFFFF)
+
+            7. спутник - triton
+            linear-gradient(
+                rgba(0, 116, 217, .5),
+                rgba(221, 221, 221, .75)
+            )
+
+            8. спутник - luna
+            linear-gradient(
+                rgba(221, 221, 221, .5),
+                rgba(221, 221, 221, .75)
+            )
+
+            9. спутник - titan
+            linear-gradient(
+                rgba(255, 133, 27, .75),
+                rgba(0, 0, 0, .75),
+                rgba(255, 133, 27, .75)
+            )
+
+            10. спутник - io
+            linear-gradient(
+                rgba(0, 116, 217, .5),
+                rgba(255, 133, 27, .25),
+                rgba(0, 116, 217, .5)
+            )
+
+            11. спутник - umbriel
+            linear-gradient(
+                rgba(0, 116, 217, .5),
+                rgba(255, 255, 255, .25),
+                rgba(0, 116, 217, .5)
+            )
+
+            12. спутник - europa
+            linear-gradient(
+                rgba(255, 133, 27, .5),
+                rgba(255, 220, 0, .25),
+                rgba(255, 255, 255, .5)
+            )
+
+            13. спутник - io
+            linear-gradient(
+                to right,
+                rgba(0, 116, 217, .5),
+                rgba(255, 133, 27, .25),
+                rgba(0, 116, 217, .5)
+            )
+
+            14. спутник - umbriel
+            linear-gradient(
+                to right,
+                rgba(0, 116, 217, .5),
+                rgba(255, 255, 255, .25),
+                rgba(0, 116, 217, .5)
+            )
+
+            15. спутник - europa
+            linear-gradient(
+                to right,
+                rgba(255, 133, 27, .5),
+                rgba(255, 220, 0, .25),
+                rgba(255, 255, 255, .5)
+            )
+            */
+
+            .luna {
+                top: 10px;
+                left: 10px;
+                background-image: linear-gradient(
+                    rgba(221, 221, 221, .5),
+                    rgba(221, 221, 221, .75)
+                );
+                background-color: #FFDC00;
+            }
+
+            .umbriel {
+                top: 10px;
+                left: 180px;
+                background-image:
+                    linear-gradient(
+                        rgba(0, 116, 217, .5),
+                        rgba(255, 255, 255, .25),
+                        rgba(0, 116, 217, .5)
+                    ),
+                    linear-gradient(
+                        to right,
+                        rgba(0, 116, 217, .5),
+                        rgba(255, 255, 255, .25),
+                        rgba(0, 116, 217, .5)
+                    );
+                background-color: #DDDDDD;
+            }
+
+            .titan {
+                top: 10px;
+                left: 350px;
+                background-image: linear-gradient(
+                    rgba(255, 133, 27, .75),
+                    rgba(0, 0, 0, .75),
+                    rgba(255, 133, 27, .75)
+                );
+                background-color: #DDDDDD;
+            }
+
+            .io {
+                top: 165px;
+                left: 10px;
+                background-image:
+                    linear-gradient(
+                        rgba(0, 116, 217, .5),
+                        rgba(255, 133, 27, .25),
+                        rgba(0, 116, 217, .5)
+                    ),
+                    linear-gradient(
+                        to right,
+                        rgba(0, 116, 217, .5),
+                        rgba(255, 133, 27, .25),
+                        rgba(0, 116, 217, .5)
+                    );
+                background-color: #DDDDDD;
+            }
+
+            .europa {
+                top: 165px;
+                left: 180px;
+                background-image:
+                    linear-gradient(
+                        rgba(255, 133, 27, .5),
+                        rgba(255, 220, 0, .25),
+                        rgba(255, 255, 255, .5)
+                    ),
+                    linear-gradient(
+                        to right,
+                        rgba(255, 133, 27, .5),
+                        rgba(255, 220, 0, .25),
+                        rgba(255, 255, 255, .5)
+                    );
+                background-color: #DDDDDD;
+            }
+
+            .triton {
+                top: 165px;
+                left: 350px;
+                background-image:
+                    linear-gradient(
+                        rgba(0, 116, 217, .5),
+                        rgba(221, 221, 221, .75)
+                    ),
+                    linear-gradient(#FFDC00, #FFFFFF);
+                background-color: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="moon luna"></div>
+        <div class="moon umbriel"></div>
+        <div class="moon titan"></div>
+        <div class="moon io"></div>
+        <div class="moon europa"></div>
+        <div class="moon triton"></div>
+    </body>
+</html>
