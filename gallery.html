@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3 - Галерея</title>
+    <style>
+        .gallery li {
+            float: left;
+            margin: 0 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            list-style: none;
+        }
+
+        .gallery img {
+            float: left;
+            width: 200px;
+            /* Сгладим масштабирование переходом */
+            -webkit-transition: transform 0.2s ease-in-out;
+                 -o-transition: transform 0.2s ease-in-out;
+                    transition: transform 0.2s ease-in-out;
+        }
+
+        .gallery a:hover img {
+            /* Относительно какой части картинки ее нужно масштабировать */
+            -webkit-transform-origin: center;
+               -moz-transform-origin: center;
+                -ms-transform-origin: center;
+                 -o-transform-origin: center;
+                    transform-origin: center;
+            /* scale - увеличить картинку в полтора раза относительно их изначального размера */
+            /* rotate - поворачиваем картинку на 10 градусов влево*/
+            /* skew - параметр кручения: -5 градусов по координате Х, 30 градусов по координате У */
+            -webkit-transform: scale(1.5) /* rotate(-10deg) */ /* skew(-5deg, 30deg) */ translate(20px, 40px);
+                -ms-transform: scale(1.5) /* rotate(-10deg) */ /* skew(-5deg, 30deg) */ translate(20px, 40px);
+                 -o-transform: scale(1.5) /* rotate(-10deg) */ /* skew(-5deg, 30deg) */ translate(20px, 40px);
+                    transform: scale(1.5) /* rotate(-10deg) */ /* skew(-5deg, 30deg) */ translate(20px, 40px);
+            /* Подходящая тень */
+            -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+                    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <ul class="gallery">
+        <li><a href="#"><img src="img/1.jpg"></a></li>
+        <li><a href="#"><img src="img/2.jpg"></a></li>
+        <li><a href="#"><img src="img/3.jpg"></a></li>
+    </ul>
+</body>
+</html>
